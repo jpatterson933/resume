@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="index.css">
     <title>Jeffery Patterson Resume 2022</title>
 </head>
-
+<a href = "mailto: abc@example.com">Send Email</a>
 <body>
     <div id="main-grid"> <!-- Main Grid --> 
         <div id="intro-grid-wrapper"> <!-- First Grid Row (Introduction)-->
-            <div>Jeffery W. Patterson</div> <!--one row-->
+            <div id="name">Jeffery W. Patterson</div> <!--one row-->
             <div id="intro-details"> <!-- Row Two-->
                 <div> <!-- Column 1 -->
                     <div>Los Angeles, California</div>
-                    <div>jpatterson933@ucla.edu</div>
+                    <div><a href="mailto: jpatterson933@ucla.edu">jpatterson933@ucla.edu</a></div>
                     <div>Github</div>
                     <div>(951)581-6263</div>
                 </div>
@@ -36,8 +36,8 @@
         </div>
 
         <div id="education-grid-wrapper"> <!-- Second Grid Row (Education) -->
-            <div>Education</div> <!-- Row One-->
-            <div> <!-- Row Two -->
+            <div class="section-title">Education</div> <!-- Row One-->
+            <div id="education-details"> <!-- Row Two -->
                 <div> <!-- Column 1 -->
                     <div>Bachelors of Arts</div>
                     <div>University of California Los Angeles (UCLA)</div>
@@ -50,8 +50,8 @@
                 </div>
             </div>
         </div>
-        <div> <!-- Third Grid Row (Skills) -->
-            <div>Skills</div> <!-- Row 1 -->
+        <div id="skills-grid-wrapper"> <!-- Third Grid Row (Skills) -->
+            <div class="section-title">Skills</div> <!-- Row 1 -->
             <div> <!-- Row Two -->
                 <div>Management & Oversight</div>
                 <div>Google Drive</div>
@@ -60,17 +60,17 @@
                 <div>Adobe Applications</div>
             </div>
         </div>
-        <div> <!-- Fourth Grid Row (Employment)-->
-            <div>Last 7 Years</div> <!-- Row One -->
-            <div><!-- Row Two (Employment 1)-->
-                <div> <!-- Row One -->
-                    <div>Elephante - Bar Manager - 2018 - Present</div>
+        <div id="employment-grid-wrapper"> <!-- Fourth Grid Row (Employment)-->
+            <div class="section-title">Last 7 Years</div> <!-- Row One -->
+            <div id="emp-elephante-details"><!-- Row Two (Employment 1)-->
+                <div id="emp-ele-details"> <!-- Row One -->
+                    <div>Elephante & Belles Beach House Bar Manager | 2018 - Present</div>
                     <div>I am responsible for maitaining and overseeing the restaurant during service as well as overight on the spaces used by the bar and 
                         the bar program. Requirements include an attitude that fosters relationships and mentors
                         fellow colleagues as well as the ability to critically think and analyze situations on the fly.
                     </div>
                 </div>
-                <div><!-- Row Two -->
+                <div id="emp-ele-det-description"><!-- Row Two -->
                     <div> <!-- Column 1-->
                         <div>Monthly & Weekly Inventory Management</div>
                         <div>Weekly Ordering</div>
@@ -85,20 +85,28 @@
                     </div>
                 </div>
             </div>
-            <div> <!-- Row Three -->
-                <div> <!-- Row One -->
+            <div id="emp-organics-details"> <!-- Row Three -->
+                <div id="emp-org-details"> <!-- Row One -->
                     <div>PHD Organics - Chief Online Operations Officer 2017-2021</div>
-                    <div>I responsible for maitaining an online presence, running all ecommerce backend as well
+                    <div>I responsible for maintaining an online presence, running all ecommerce backend as well
                         as overall design of elements going on social media, owned websites, as well as Third party
                         ecommerce websites. Requirements inlcuded the ability to work on my own, set my own work pace
                         and work load as well as run entire day to day operations of online presence.
                     </div>
                 </div>
-                <div> <!-- Row Two -->
-                    <div>Naviage and Set up Shopify, Bigcommerce, and Square profile accounts</div>
-                    <div>Create and launch yearly mareketing plans with quarterly budgets</div>
-                    <div>Data analysis for website traffice and online cash flow</div>
-                    <div>Graphic Design work</div>
+                <div id="emp-org-det-description"> <!-- Row Two -->
+                    <div> <!-- Column 1-->
+                        <div>Navigate and Set up Shopify, Bigcommerce, and Square profile accounts</div>
+                        <div>Create and launch yearly mareketing plans with quarterly budgets</div>
+                        <div>Data analysis for website traffice and online cash flow</div>
+                        <div>Graphic design work</div>
+                    </div>
+                    <div> <!-- Column 2-->
+                        <div>Create, setup and staff distribution network</div>
+                        <div>Create manufacturing guidelines</div>
+                        <div>Create and test new products</div>
+                        <div>Manage brick-and-mortar store</div>
+                    </div>
                 </div>
             </div>
         </div>

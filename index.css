@@ -1,20 +1,77 @@
+body {
+    max-width: 1500px;
+}
+/* Grid Styling */
 #main-grid {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    /* grid-template-rows: repeat(4fr, auto); */
     background-color: lightblue;
 }
-
 #intro-grid-wrapper{
     display: grid;
-    grid-template-rows: 25% 1fr;
+    grid-template-rows: 79.8px 1fr;
+    row-gap: 2ch;
 }
-
 #intro-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+/* education */
+#education-grid-wrapper {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+#education-details {
     display: grid;
     grid-template-columns: 50% 50%;
 }
-
-#education-grid-wrapper {
+/* skills section */
+#skills-grid-wrapper {
     display: grid;
-    grid-template-rows: 25% 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+/* employment section */
+#employment-grid-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 200px 200px;
+}
+#emp-elephante-details {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+#emp-ele-details {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+#emp-ele-det-description {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#emp-organics-details {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+#emp-org-details {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+#emp-org-det-description {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Main Styling */
+
+/* Jeffery W. Patterson */
+#name {
+    background-color: white;
+    font-size: 5em;
+}
+
+/* Titles for each section */
+.section-title {
+    font-size: 3em;
+    text-align: center;
 }
