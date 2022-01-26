@@ -234,6 +234,28 @@ a:link, a:visited {
         padding-top: 1em;
     }
 
+    #emp-organics-details {
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+        padding-top: 13em;
+    }
+
+    .right-ele-details, .right-org-details {
+        background-color: white;
+        text-align: center;
+        padding: 0.5em 0 1em 0;
+        margin: 5px 0 5px 0;
+        font-size: 14px;
+    }
+
+    .left-ele-details, .left-org-details {
+        background-color: white;
+        text-align: center;
+        padding: 0.5em 0 1em 0;
+        margin: 5px 10px 5px 0;
+        font-size: 14px;
+    }
+
 
 
 }
