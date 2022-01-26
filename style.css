@@ -17,63 +17,63 @@ body {
     margin: auto;
 }
 #intro-grid-wrapper{
-    display: grid;
-    grid-template-rows: 79.8px 1fr;
+    
+    grid-template-rows: 76.8px 1fr;
     row-gap: 2ch;
 }
 #intro-details {
-    display: grid;
+    
     grid-template-columns: repeat(2, 1fr);
 }
 
 #languages {
-    display: grid;
+    
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
 }
 /* education */
 #education-grid-wrapper {
-    display: grid;
+    
     grid-template-rows: 1fr 2fr;
 }
 #education-details {
-    display: grid;
+    
     grid-template-columns: 50% 50%;
 }
 /* skills section */
 #skills-grid-wrapper {
-    display: grid;
+    
     grid-template-rows: 0.5fr 2fr;
 }
 /* employment section */
 #employment-grid-wrapper {
-    display: grid;
+    
     grid-template-rows: 1fr 200px 200px;
 }
 #emp-elephante-details {
-    display: grid;
+    
     grid-template-rows: 1fr 2fr;
 }
 #emp-ele-details {
-    display: grid;
+    
     grid-template-rows: 1fr 2fr;
 }
 #emp-ele-det-description {
-    display: grid;
+    
     grid-template-columns: repeat(2, 1fr);
 }
 
 #emp-organics-details {
-    display: grid;
+    
     grid-template-rows: 1fr 2fr;
 }
 
 #emp-org-details {
-    display: grid;
+    
     grid-template-rows: 1fr 2fr;
 }
 #emp-org-det-description {
-    display: grid;
+    
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -183,6 +183,20 @@ a:link, a:visited {
     font-size: 20px;
 
 }
+@media only screen and (max-width: 1020px) {
+    #name {
+        background-color: white;
+        font-size: 4em;
+        text-align: center;
+    }
+
+    #intro-grid-wrapper {
+        display: grid;
+        grid-template-rows: 60.8px 3fr;
+        row-gap: 2ch;
+    }
+}
+
 
 @media only screen and (max-width: 500px) {
 
