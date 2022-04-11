@@ -124,14 +124,14 @@ a:link, a:visited {
     background-color: white;
 }
 
-.degree:hover {
+/* .degree:hover {
     background: rgb(115, 194, 300);
     text-align: right;
     font-size: 2em;
     transition: 0.8s ease;
     box-shadow: 1px 1px 11px black;
     
-}
+} */
 .certificate {
     text-align: left;
     padding: 0.5em 0 0.5em 1em;
