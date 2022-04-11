@@ -17,7 +17,6 @@ body {
     margin: auto;
 }
 #intro-grid-wrapper{
-    
     grid-template-rows: 76.8px 1fr;
     row-gap: 2ch;
 }
