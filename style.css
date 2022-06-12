@@ -99,13 +99,21 @@ a:link, a:visited {
 
 /* main contact details */
 .contact-details {
-    text-align: right;
-    margin-right: 10px;
+    display: flex;
     background-color: white;
     font-size: 1.5em;
-    padding: 1em 1em 1em 0;
     box-shadow: var(--box-shadow)
 }
+.contact-details > div {
+    margin: 0 auto;
+    /* padding: 0 1em; */
+}
+.contact-details > div > a:hover {
+    background: rgba(39, 144, 179, .4);
+    padding: 3px 0;
+    border-radius: 1px;
+}
+
 
 /* languages formatting */
 #languages {
@@ -116,23 +124,22 @@ a:link, a:visited {
     box-shadow: var(--box-shadow);
 }
 /* education styles */
+
+#education-details {
+    display: flex;
+    margin: 0 auto;
+}
 .degree {
     text-align: right;
-    margin-right: 10px;
+    /* margin-right: 10px; */
+    width: 250px;
     padding: 0.5em 1em 0.5em 0;
     background-color: white;
 }
 
-/* .degree:hover {
-    background: rgb(115, 194, 300);
-    text-align: right;
-    font-size: 2em;
-    transition: 0.8s ease;
-    box-shadow: 1px 1px 11px black;
-    
-} */
 .certificate {
-    text-align: left;
+    /* text-align: left; */
+    width: 250px;
     padding: 0.5em 0 0.5em 1em;
     background-color: white;
     /* transition: 0.1s ease; */
