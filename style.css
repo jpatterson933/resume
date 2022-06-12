@@ -135,16 +135,10 @@ a:link, a:visited {
     text-align: left;
     padding: 0.5em 0 0.5em 1em;
     background-color: white;
-    transition: 0.1s ease;
+    /* transition: 0.1s ease; */
     
 }
-.certificate:hover {
-    background: rgb(115, 194, 300);
-    text-align: left;
-    font-size: 2em;
-    transition: 0.8s ease;
-    box-shadow: 1px 1px 11px black;
-}
+
 /* skills style */
 .skills {
     display: grid;
