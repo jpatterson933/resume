@@ -9,35 +9,15 @@ class Language {
         this.name = name;
         this.startYear = startYear;
         this.currentYear = currentYear;
-        
         this.gitLink = `<p><a href="https://jpatterson933.github.io/Stats-On-Github/" target="_blank" title="My Github Language Stats page created with Javascript - Donut Graphs"  id="gls" class="github-language-stats" >Github Language Stats</a></p>`
     }
 
     // function to calculate total experience for years if years are the same experience will return as 0
     calculateExperience() {
-        // 
         if (this.currentYear === this.startYear) { return 0; }
         let totalYrExp = this.currentYear - this.startYear;
         return totalYrExp;
     }
-    // tried to get a flickering text here
-    // flickerText(text) {
-    //     let op = 0.1;
-    //     let increment = +0.1;
-    //     message.textContent = text;
-    //     message.style.opacity = 0;
-    //     message.style.display = 'inline';
-
-    //     let timer = setInterval(function () {
-    //         op += increment;
-    //         message.style.opacity = op;
-    //         if (op >=1) increment = -increment;
-    //         if (op <=0) {
-    //             message.style.display = 'none';
-    //             clearInterval(timer); // end
-    //         }
-    //     }, 50);
-    // }
 
     shouldDisplay(language) {
         const languageCard = $("#languages");
@@ -70,7 +50,6 @@ languageArrayIndex = -1;
 // push language classes into our array
 languageArray.push(html, css, javascript, jQuery, bash, powershell);
 
-
 // actual slide - wtf i did it!?! only took 6 months to figure out lol
 const slideInterval = setInterval(() => {
     // increase our index (much like increasing i in a for loop)
@@ -79,27 +58,9 @@ const slideInterval = setInterval(() => {
     if(languageArrayIndex >= languageArray.length) {
         languageArrayIndex = 0;
     };
-
     // here we are basically reversing the push that was done earlier and assigning each class
     let language = languageArray[languageArrayIndex];
     // the we run the shouldDisplay that is inside the language classes
     language.shouldDisplay(language);
-
     // interval runs every 5 seconds
 }, 2500);
-
-// const languageCard = $("#languages");
-
-// const languageCardDisplay = (appendTo) => {
-//     card = `<div id="language-card-wrapper">
-//             <h1>${html.name}</h1>
-//             <p>Started in ${html.startYear}</p>
-//             <p>Current Year: ${html.currentYear}</p>
-//             <p>Total Experience: ${html.calculateExperience()} year</p>
-//         </div>
-//     `
-
-//     appendTo.append(card);
-// };
-
-// languageCardDisplay(languageCard);
