@@ -86,7 +86,7 @@ const slideInterval = setInterval(() => {
     language.shouldDisplay(language);
 
     // interval runs every 5 seconds
-}, 1000);
+}, 2500);
 
 // const languageCard = $("#languages");
 
