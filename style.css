@@ -59,11 +59,9 @@ a:visited {
 
 /*----------------------------------------------------------- languages formatting */
 #languages {
-    padding-top: 18px;
     margin-top: 10px;
     text-align: center;
     font-size: 1.5em;
-    height: 156px;
     color: white !important;
     background-color: black;
     box-shadow: 0 0 0 1px black, 0 0 0 2px rgb(255, 255, 255), 0 0 0 3px rgb(255, 255, 255), 0 0 0 8px black;
@@ -73,7 +71,6 @@ a:visited {
 .initial-github-stats {
     text-align: center;
     padding: 1em 0;
-    background-color: transparent;
     color: white !important;
 }
 
