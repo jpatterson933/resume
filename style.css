@@ -1,6 +1,7 @@
-/* global variables */
+/*------------------------------------------------------ global variables */
 :root {
     --box-shadow: 0px 0px 1px 0px black;
+    --bg-color: white;
 }
 
 /*------------------------------------------------------- body styling */
@@ -11,11 +12,12 @@ body {
     padding: 2em;
     border: 1px solid white;
 }
+
 /* ----------------------------------------------------------Main Styling */
 
 /* Jeffery W. Patterson */
 #name {
-    background-color: white;
+    background-color: var(--bg-color);
     font-size: 5em;
     text-align: center;
 }
@@ -28,84 +30,82 @@ body {
 }
 
 /*----------------------------------------------- link styling */
-a:link, a:visited {
+a:link,
+a:visited {
     text-decoration: none;
     color: black;
 }
 
-/* main contact details */
+/*----------------------------------------- contact details box */
 .contact-details {
     display: flex;
-    background-color: white;
     font-size: 1.5em;
+    background-color: var(--bg-color);
     box-shadow: var(--box-shadow)
 }
-/* The individual contact details on nav  */
-.contact-details > div {
-    margin: 0 auto;
-    box-shadow: 10px 12px 0.5rem rgba(0,0,0,0.5);
+
+/*------------------------------------------ navigation bar  */
+.contact-details>div {
+    margin: 0 auto 8px auto;
     padding: 10px 5px;
-    margin-bottom: 8px;
+    box-shadow: 10px 12px 0.5rem rgba(0, 0, 0, 0.5);
 }
-.contact-details > div > a:hover {
-    border: solid black;
-    border-top-style: none;
-    border-bottom-style: dotted;
-    border-right-style: dotted;
-    border-left-style: none;
+
+.contact-details>div>a:hover {
     padding: 3px 0;
+    border: solid black;
+    border-style: none dotted dotted none;
     border-radius: 1px;
 }
 
 /*----------------------------------------------------------- languages formatting */
 #languages {
+    padding-top: 18px;
+    margin-top: 10px;
     text-align: center;
     font-size: 1.5em;
-    background: white;
-    box-shadow: var(--box-shadow);
     height: 156px;
-    padding-top: 18px;
+    color: white !important;
+    background-color: black;
+    box-shadow: 0 0 0 1px black, 0 0 0 2px rgb(255, 255, 255), 0 0 0 3px rgb(255, 255, 255), 0 0 0 8px black;
 }
 
-.github-language-stats, .initial-github-stats {
+.github-language-stats,
+.initial-github-stats {
     text-align: center;
     padding: 1em 0;
     background-color: transparent;
     color: white !important;
 }
 
-#languages {
-    background-color: rgba(0, 0, 0);
-    box-shadow: 0 0 0 1px black, 0 0 0 2px rgb(255, 255, 255), 0 0 0 3px rgb(255, 255, 255), 0 0 0 8px black;
-    color: white !important;
-    margin-top: 10px;
-}
 
 /*----------------------------------------------------------- education section */
-
 #education-aside {
-    padding: 10px 0;
     display: flex;
+    padding: 10px 0;
 }
 
-#education-details, #education-details-right {
+#education-details,
+#education-details-right {
     display: flex;
-    padding: 1px 0;
     flex-grow: 1;
-    justify-content: space-evenly;
     margin: 0 auto;
+    padding: 1px 0;
+    justify-content: space-evenly;
+}
+
+.degree,
+.certificate {
+    width: 100%;
+    background-color: var(--bg-color);
 }
 
 .degree {
     text-align: right;
-    width: 100%;
-    background-color: white;
 }
 
 .certificate {
-    width: 100%;
     padding: 0.5em 0 0.5em 1em;
-    background-color: white;
 }
 
 /*--------------------------------------------------- skills style */
@@ -115,14 +115,12 @@ a:link, a:visited {
     font-size: 18px;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
-    background: white;
+    background-color: var(--bg-color);
 }
 
 .column-title {
     margin-bottom: 12px;
     font-size: 2em;
-    /* font-weight: bolder; */
-    text-shadow:  #00e6e6 -10px, 10px, #01cccc 0px, -20px, 20px 0px, #00bdbd -30px 30px 0px  !important;
 }
 
 @media only screen and (max-width: 751px) {
@@ -138,14 +136,16 @@ a:link, a:visited {
         padding: 10px 0;
         display: flex;
     }
-    
-    #education-details, #education-details-right {
+
+    #education-details,
+    #education-details-right {
         display: flex;
         padding: 1px 0;
         flex-direction: column;
     }
 
-    .degree, .certificate {
+    .degree,
+    .certificate {
         font-size: 20px;
         height: 80%;
         padding: 0;
@@ -157,28 +157,27 @@ a:link, a:visited {
         width: 100%;
     }
 
-    .degree > div {
+    .degree>div {
         padding-right: 10px;
     }
 
-    .certificate > div {
+    .certificate>div {
         padding-left: 10px;
     }
-
 
     .skills {
         display: flex;
         flex-direction: column;
-        width: fit-content;
         margin: 0 auto;
+        padding: 12px 24px;
+        width: fit-content;
         font-size: 18px;
         text-align: center;
-        background: white;
         box-shadow: 5px 5px 5px black, 10px 10px 7px white;
         border-radius: 2%;
-        padding: 12px 24px;
+        background-color: var(--bg-color);
     }
-    
+
     .column-title {
         padding-top: 10px;
         font-size: 24px;
