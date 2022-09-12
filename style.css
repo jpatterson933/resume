@@ -3,14 +3,13 @@
     --box-shadow: 0px 0px 1px 0px black;
 }
 
-/* main page styling */
+/*------------------------------------------------------- body styling */
 body {
     max-width: 1500px;
     background-color: black;
     margin: 10px 2em 0px 2em;
     padding: 2em;
     border: 1px solid white;
-
 }
 /* ----------------------------------------------------------Main Styling */
 
@@ -26,10 +25,9 @@ body {
     font-size: 3em;
     color: white;
     text-align: center;
-    
 }
 
-/* link styling */
+/*----------------------------------------------- link styling */
 a:link, a:visited {
     text-decoration: none;
     color: black;
@@ -43,7 +41,7 @@ a:link, a:visited {
     box-shadow: var(--box-shadow)
 }
 /* The individual contact details on nav  */
-.contact-details > div{
+.contact-details > div {
     margin: 0 auto;
     box-shadow: 10px 12px 0.5rem rgba(0,0,0,0.5);
     padding: 10px 5px;
@@ -57,21 +55,16 @@ a:link, a:visited {
     border-left-style: none;
     padding: 3px 0;
     border-radius: 1px;
-
-
 }
 
-
 /*----------------------------------------------------------- languages formatting */
-
-
 #languages {
     text-align: center;
     font-size: 1.5em;
     background: white;
     box-shadow: var(--box-shadow);
     height: 156px;
-    padding: 0 auto;
+    padding-top: 18px;
 }
 
 .github-language-stats, .initial-github-stats {
@@ -79,7 +72,6 @@ a:link, a:visited {
     padding: 1em 0;
     background-color: transparent;
     color: white !important;
-
 }
 
 #languages {
@@ -94,7 +86,6 @@ a:link, a:visited {
 #education-aside {
     padding: 10px 0;
     display: flex;
-
 }
 
 #education-details, #education-details-right {
@@ -107,22 +98,17 @@ a:link, a:visited {
 
 .degree {
     text-align: right;
-    /* margin-right: 10px; */
     width: 100%;
-    /* padding: 0.5em 1em 0.5em 0; */
     background-color: white;
 }
 
 .certificate {
-    /* text-align: left; */
     width: 100%;
     padding: 0.5em 0 0.5em 1em;
     background-color: white;
-    /* transition: 0.1s ease; */
-    
 }
 
-/* skills style */
+/*--------------------------------------------------- skills style */
 .skills {
     padding: 20px 0;
     display: grid;
@@ -139,94 +125,63 @@ a:link, a:visited {
     text-shadow:  #00e6e6 -10px, 10px, #01cccc 0px, -20px, 20px 0px, #00bdbd -30px 30px 0px  !important;
 }
 
-
-/* @media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 751px) {
     #name {
-        background-color: white;
-        font-size: 4em;
-        text-align: center;
-    }
-
-    #intro-grid-wrapper {
-        display: grid;
-        grid-template-rows: 60.8px 3fr;
-        row-gap: 2ch;
-    }
-} */
-
-
-/* @media only screen and (max-width: 500px) {
-
-    #name {
-        background-color: white;
-        font-size: 2em;
-        text-align: center;
-    }
-
-    #intro-grid-wrapper {
-        display: grid;
-        grid-template-rows: 32px 3fr;
-        row-gap: 1ch;
-    }
-
-    #intro-details {
-        display: grid;
-        grid-template-columns: 1fr;
+        font-size: 3em;
     }
 
     .contact-details {
-        text-align: center;
-        background-color: white;
-        font-size: 1.25em;
-        box-shadow: var(--box-shadow);
+        font-size: 16px;
+    }
+
+    #education-aside {
+        padding: 10px 0;
+        display: flex;
+    }
+    
+    #education-details, #education-details-right {
+        display: flex;
+        padding: 1px 0;
+        flex-direction: column;
+    }
+
+    .degree, .certificate {
+        font-size: 20px;
+        height: 80%;
         padding: 0;
-        margin: 0;
+        margin-top: 1px;
     }
 
-    .section-title {
-        font-size: 2em;
+    .degree {
+        text-align: right;
+        width: 100%;
+    }
+
+    .degree > div {
+        padding-right: 10px;
+    }
+
+    .certificate > div {
+        padding-left: 10px;
+    }
+
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 0 auto;
+        font-size: 18px;
         text-align: center;
-    }
-
-    .emp-title {
-        background-color: white;
-        text-align: center;
-    }
-
-    #emp-ele-details {
-        display: grid;
-        grid-template-rows: 1fr 4fr;
-    }
-
-    .ele-description, .org-description {
         background: white;
-        text-align: center;
-        padding-left: 0;
-        padding-top: 1em;
+        box-shadow: 5px 5px 5px black, 10px 10px 7px white;
+        border-radius: 2%;
+        padding: 12px 24px;
     }
-
-    #emp-organics-details {
-        display: grid;
-        grid-template-rows: 1fr 2fr;
-        padding-top: 1em;
+    
+    .column-title {
+        padding-top: 10px;
+        font-size: 24px;
+        font-weight: bolder;
     }
-
-    .right-ele-details, .right-org-details {
-        background-color: white;
-        text-align: center;
-        padding: 0.5em 0 1em 0;
-        margin: 5px 0 5px 0;
-        font-size: 14px;
-    }
-
-    .left-ele-details, .left-org-details {
-        background-color: white;
-        text-align: center;
-        padding: 0.5em 0 1em 0;
-        margin: 5px 10px 5px 0;
-        font-size: 14px;
-    }
-
-
-
-} */
+}
