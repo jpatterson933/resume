@@ -9,7 +9,8 @@ class Language {
         this.name = name;
         this.startYear = startYear;
         this.currentYear = currentYear;
-        this.projects = projects;
+        
+        this.gitLink = `<p><a href="https://jpatterson933.github.io/Stats-On-Github/" target="_blank" title="My Github Language Stats page created with Javascript - Donut Graphs"  id="gls" class="github-language-stats" >Github Language Stats</a></p>`
     }
 
     // function to calculate total experience for years if years are the same experience will return as 0
@@ -19,35 +20,55 @@ class Language {
         let totalYrExp = this.currentYear - this.startYear;
         return totalYrExp;
     }
+    // tried to get a flickering text here
+    // flickerText(text) {
+    //     let op = 0.1;
+    //     let increment = +0.1;
+    //     message.textContent = text;
+    //     message.style.opacity = 0;
+    //     message.style.display = 'inline';
+
+    //     let timer = setInterval(function () {
+    //         op += increment;
+    //         message.style.opacity = op;
+    //         if (op >=1) increment = -increment;
+    //         if (op <=0) {
+    //             message.style.display = 'none';
+    //             clearInterval(timer); // end
+    //         }
+    //     }, 50);
+    // }
 
     shouldDisplay(language) {
         const languageCard = $("#languages");
         const card = `<div id="language-card-wrapper">
+        ${language.gitLink}
         <h1>${language.name}</h1>
-        <p>Began learning in ${language.startYear}</p>
-        <p>${language.calculateExperience()} year experience</p>
-        <p>Total Projects with Language: ${language.projects}</p>
+        <p>My journey started in ${language.startYear}</p>
+        <p>Year(s) experience: ${language.calculateExperience()}</p>
+        <p>"I love to code"</p>
     </div>
     `;
         languageCard.empty().append(card);
     }
 
-
 };
 
 // number of projects is not accurate, just a pulled number for when the language is the MAIN language - ISSUE: Number of Projects
 // our language classes
-const html = new Language('HTML', 2021, curYr, 4);
-const css = new Language('CSS', 2021, curYr, 3);
-const javascript = new Language('Javascript', 2021, curYr, 25);
+const html = new Language('HTML', 2021, curYr);
+const css = new Language('CSS', 2021, curYr);
+const javascript = new Language('Javascript', 2021, curYr);
 const jQuery = new Language('jQuery', 2021, curYr, 25);
+const bash = new Language('Bash Scripting', 2022, curYr);
+const powershell = new Language('PowerShell', 2022, curYr);
 
 // empty array where we push our languages into
 const languageArray = [];
 // we set our index to -1 so it starts at the first one which is 0
 languageArrayIndex = -1;
 // push language classes into our array
-languageArray.push(html, css, javascript, jQuery);
+languageArray.push(html, css, javascript, jQuery, bash, powershell);
 
 
 // actual slide - wtf i did it!?! only took 6 months to figure out lol
@@ -65,7 +86,7 @@ const slideInterval = setInterval(() => {
     language.shouldDisplay(language);
 
     // interval runs every 5 seconds
-}, 5000);
+}, 1000);
 
 // const languageCard = $("#languages");
 
