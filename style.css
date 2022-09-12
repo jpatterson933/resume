@@ -12,74 +12,6 @@ body {
     border: 1px solid white;
 
 }
-/* Grid Styling */
-#main-grid {
-    display: grid;
-    /* grid-template-rows: repeat(4fr, auto); */
-    background-color: lightblue;
-    max-width: 1250px;
-    margin: auto;
-}
-#intro-grid-wrapper{
-    grid-template-rows: 76.8px 1fr;
-    row-gap: 2ch;
-}
-#intro-details {
-    
-    grid-template-columns: repeat(2, 1fr);
-}
-
-#languages {
-    
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-evenly;
-}
-/* education */
-#education-grid-wrapper {
-    
-    grid-template-rows: 1fr 2fr;
-}
-#education-details {
-    
-    grid-template-columns: 50% 50%;
-}
-/* skills section */
-#skills-grid-wrapper {
-    
-    grid-template-rows: 0.5fr 2fr;
-}
-/* employment section */
-#employment-grid-wrapper {
-    
-    grid-template-rows: 1fr 200px 200px;
-}
-#emp-elephante-details {
-    
-    grid-template-rows: 1fr 2fr;
-}
-#emp-ele-details {
-    
-    grid-template-rows: 1fr 2fr;
-}
-#emp-ele-det-description {
-    
-    grid-template-columns: repeat(2, 1fr);
-}
-
-#emp-organics-details {
-    
-    grid-template-rows: 1fr 2fr;
-}
-
-#emp-org-details {
-    
-    grid-template-rows: 1fr 2fr;
-}
-#emp-org-det-description {
-    
-    grid-template-columns: repeat(2, 1fr);
-}
-
 /* ----------------------------------------------------------Main Styling */
 
 /* Jeffery W. Patterson */
@@ -94,7 +26,6 @@ body {
     font-size: 3em;
     color: white;
     text-align: center;
-    /* margin-left: 50%; */
     
 }
 
@@ -132,10 +63,7 @@ a:link, a:visited {
 
 
 /*----------------------------------------------------------- languages formatting */
-nav {
-    /* padding-bottom: 2em; */
 
-}
 
 #languages {
     text-align: center;
@@ -160,13 +88,7 @@ nav {
     color: white !important;
     margin-top: 10px;
 }
-/* github-language-stats id 
-#gls {
-    padding: 2px;
-    background-color: rgba(128, 128, 128, 0.404);
 
-
-} */
 /*----------------------------------------------------------- education section */
 
 #education-aside {
@@ -175,12 +97,6 @@ nav {
 
 }
 
-/* .section-title {
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
-} */
-
 #education-details, #education-details-right {
     display: flex;
     padding: 1px 0;
@@ -188,8 +104,6 @@ nav {
     justify-content: space-evenly;
     margin: 0 auto;
 }
-
-
 
 .degree {
     text-align: right;
@@ -226,7 +140,7 @@ nav {
 }
 
 
-@media only screen and (max-width: 1020px) {
+/* @media only screen and (max-width: 1020px) {
     #name {
         background-color: white;
         font-size: 4em;
@@ -238,10 +152,10 @@ nav {
         grid-template-rows: 60.8px 3fr;
         row-gap: 2ch;
     }
-}
+} */
 
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
 
     #name {
         background-color: white;
@@ -315,4 +229,4 @@ nav {
 
 
 
-}
+} */
