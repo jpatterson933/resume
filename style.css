@@ -89,11 +89,18 @@ a:visited {
     padding: 1px 0;
     justify-content: space-evenly;
 }
+#education-details {
+    margin-right: 1px;
+}
 
 .degree,
 .certificate {
     width: 100%;
     background-color: var(--bg-color);
+}
+
+.degree > div, .certificate > div {
+    font-size: 18px;
 }
 
 .degree {
