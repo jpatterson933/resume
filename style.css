@@ -71,6 +71,12 @@ a:visited {
     box-shadow: 0 0 0 1px black, 0 0 0 2px rgba(0,231,158,1), 0 0 0 3px rgba(0,231,158,1), 0 0 0 8px black;
 }
 
+/* #language-card-wrapper > h1 {
+    transition-property: all;
+    transition: ease 1s;
+    transition-duration: 1s;
+} */
+
 .github-language-stats,
 .initial-github-stats {
     text-align: center;
@@ -130,6 +136,12 @@ a:visited {
 .column-title {
     margin-bottom: 12px;
     font-size: 2em;
+}
+
+footer {
+    color: white;
+    margin-top: 24px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 751px) {
@@ -193,5 +205,11 @@ a:visited {
         padding-top: 10px;
         font-size: 24px;
         font-weight: bolder;
+    }
+
+    footer > p {
+        color: white;
+        margin-top: 24px;
+        text-align: center;
     }
 }

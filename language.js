@@ -39,7 +39,7 @@ class Language {
 const html = new Language('HTML', 2021, curYr);
 const css = new Language('CSS', 2021, curYr);
 const javascript = new Language('Javascript', 2021, curYr);
-const jQuery = new Language('jQuery', 2021, curYr, 25);
+const jQuery = new Language('jQuery', 2021, curYr);
 const bash = new Language('Bash Scripting', 2022, curYr);
 const powershell = new Language('PowerShell', 2022, curYr);
 
@@ -62,5 +62,5 @@ const slideInterval = setInterval(() => {
     let language = languageArray[languageArrayIndex];
     // the we run the shouldDisplay that is inside the language classes
     language.shouldDisplay(language);
-    // interval runs every 5 seconds
+    // set interval time below
 }, 2500);
