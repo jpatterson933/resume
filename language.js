@@ -36,7 +36,7 @@ class Language {
 
 // number of projects is not accurate, just a pulled number for when the language is the MAIN language - ISSUE: Number of Projects
 // our language classes
-const html = new Language('HTML', 2021, curYr);
+const html = new Language('HTML', 2020, curYr);
 const css = new Language('CSS', 2021, curYr);
 const javascript = new Language('Javascript', 2021, curYr);
 const jQuery = new Language('jQuery', 2021, curYr);
