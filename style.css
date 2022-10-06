@@ -17,7 +17,8 @@ body {
 
 /* Jeffery W. Patterson */
 #name {
-    background-color: var(--bg-color);
+    background-color: black;
+    color: white;
     font-size: 5em;
     text-align: center;
 }
@@ -43,15 +44,16 @@ a:visited {
 .contact-details {
     display: flex;
     font-size: 1.5em;
-    background-color: var(--bg-color);
-    box-shadow: 0px 0px 1px 0px rgba(0, 75, 20, 1);
+    background-color: black;
 }
 
 /*------------------------------------------ navigation bar  */
 .contact-details>div {
+    background-color: var(--bg-color);
+    border-bottom: 2px solid rgba(0, 231, 158, 1);
     margin: 0 auto 8px auto;
     padding: 10px 5px;
-    box-shadow: 10px 12px 0.5rem rgba(0, 117, 56, 0.5);
+    /* box-shadow: 10px 12px 0.5rem rgba(0, 117, 56, 0.5); */
 }
 
 .contact-details>div>a:hover {
@@ -205,12 +207,15 @@ footer {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        padding: 12px 24px;
+        padding: 3px;
         width: fit-content;
         font-size: 18px;
         text-align: center;
-        box-shadow: 5px 5px 5px black, 10px 10px 7px white;
         border-radius: 2%;
+        background-color: rgba(0, 231, 158, 1);
+    }
+
+    .skills>div {
         background-color: var(--bg-color);
     }
 
