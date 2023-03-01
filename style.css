@@ -63,20 +63,49 @@ a:visited {
 }
 
 /*------------------------------------------ navigation bar  */
-.contact-details>div {
-    background-color: var(--bg-color);
-    border-bottom: 2px solid rgba(0, 231, 158, 1);
+.non-shimmer {
+    color: white;
+    border: 1px dashed rgb(0 231 158 / 41%);
     margin: 0 auto 8px auto;
-    padding: 10px 5px;
-    /* box-shadow: 10px 12px 0.5rem rgba(0, 117, 56, 0.5); */
+    border-radius: 30px;
+    padding: 10px 12px;
 }
 
-.contact-details>div>a:hover {
+.shimmer {
+    color: white;
+    background-color: #252525;
+    border: 1px solid rgb(53 220 189 / 64%);
+    margin: 0 auto 8px auto;
+    border-radius: 30px;
+    padding: 10px 12px;
+
+}
+
+/* This will be the css element that changes to the one above 
+as a sort of sparkle or shimmer to draw the users attention */
+/* .contact-details>div {
+    color: white;
+    border: 1px dashed rgb(0 231 158 / 41%);
+    margin: 0 auto 8px auto;
+    border-radius: 30px;
+    padding: 10px 12px;
+} */
+
+
+
+/*nav bar styling by html elements*/
+div>a,
+div>a:visited,
+a:link {
+    color: white;
+}
+
+/* .contact-details>div>a:hover {
     padding: 3px 0;
     border: solid black;
     border-style: none dotted dotted none;
     border-radius: 1px;
-}
+} */
 
 /*----------------------------------------------------------- languages formatting */
 
@@ -179,10 +208,11 @@ a:visited {
     list-style: none;
 }
 
-.skills>div {
+.skills>ul {
     padding: 1em;
     border: 4px solid black;
     background-color: var(--bg-color);
+    list-style: none;
 }
 
 .column-title {
