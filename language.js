@@ -1,37 +1,83 @@
+// fade in resume page
+window.addEventListener("load", function () {
+    document.body.classList.add("fade-in");
+});
 
 // get current date
-const date = new Date().toISOString();
+const date = new Date()
+const month = date.getMonth()
+const year = date.getFullYear();
+console.log(year)
+
+const getMonthYear = () => {
+    const date = new Date();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    // return [month, year];
+    return [month, year]
+}
+const returnExperienceString = (month, years) => {
+    let message;
+    switch (true) {
+        case month >= 12:
+            month = month - 12;
+            if (month === 0) {
+                years++;
+                message = `${years} years experience built so far!`;
+            } else {
+                years++;
+                message = `${years} years and ${month} months experience built so far!`;
+            }
+            break;
+        default:
+            message = `${years} years and ${month} months experience built so far!`;
+            break;
+    }
+    return message;
+};
+
 
 class Language {
-    constructor(name, startYear) {
+    constructor(name, startMonth, startYear) {
         this.name = name;
+        this.startMonth = startMonth;
         this.startYear = startYear;
-        this.currentYear = parseInt(date.split("-")[0]); // grab the year from the iso string
+        this.currentYear = getMonthYear();
         this.gitLink = `<p><a href="https://jpatterson933.github.io/Stats-On-Github/" target="_blank" title="My Github Language Stats page created with Javascript - Donut Graphs"  id="gls" class="github-language-stats" >Github Language Stats</a></p>`
     }
 
     // function to calculate total experience for years if years are the same experience will return as 0
     calculateExperience() {
-        if (this.currentYear === this.startYear) { return 0; }
-        let totalYrExp = this.currentYear - this.startYear;
-        return totalYrExp;
+        if (this.currentYear[1] === this.startYear) { return 0 }
+        // just assume the start month is 1 so january so anything 12 - 1) - currentMonth
+        // no, we would just say x amount of months from experience
+        let totalYrExp = this.currentYear[1] - this.startYear;
+        let month = this.currentYear[0] + 1 + (12 - this.startMonth)
+
+        return returnExperienceString(month, totalYrExp)
     }
 
     shouldDisplay(language) {
         const languageCard = $("#languages");
 
         // we want to append this to a new html element
-        const card = `<div id="language-card-wrapper">
+        const card = `<div id="language-card-wrapper" class="fade-in">
         ${language.gitLink}
         <h1>${language.name}</h1>
-        <p>My journey started in ${language.startYear}</p>
-        <p>Year(s) experience: ${language.calculateExperience()}</p>
+        <p>${language.calculateExperience()}</p>
         <p>"I love to code"</p>
     </div>
     `;
         languageCard.empty().append(card);
-    }
 
+        // Wait a short time for the content to be inserted before triggering the fade-in animation
+        setTimeout(() => {
+            console.log("test")
+            const languageCardWrapper = $("#language-card-wrapper");
+            languageCardWrapper.removeClass("fade-in");
+            languageCardWrapper.addClass("fade-out");
+        }, 1000); // 10 seconds (adjust as needed)
+    }
 };
 
 const createLangHeader = () => {
@@ -53,23 +99,28 @@ const createLangHeader = () => {
     githubStatsLink.setAttribute('class', 'initial-github-stats');
     githubStatsLink.textContent = 'Github Language Stats';
 
+    setTimeout(() => {
+        languagesDiv.classList.add("fade-in");
+    }, 10);
+
     // Add the anchor element as a child to the div element
     languagesDiv.appendChild(githubStatsLink);
     educationPanel.append(languagesDiv)
+    // Wait a short time for the content to be inserted before triggering the fade-in animation
 
 }
 
 
 // number of projects is not accurate, just a pulled number for when the language is the MAIN language - ISSUE: Number of Projects
 // our language classes
-const python = new Language('Python', 2022)
-const react = new Language('React', 2021)
-const html = new Language('HTML', 2020);
-const css = new Language('CSS', 2021);
-const javascript = new Language('Javascript', 2021);
-const jQuery = new Language('jQuery', 2021);
-const bash = new Language('Bash Scripting', 2022);
-const powershell = new Language('PowerShell', 2022);
+const python = new Language('Python', 11, 2022)
+const react = new Language('React', 3, 2021)
+const html = new Language('HTML', 1, 2020);
+const css = new Language('CSS', 1, 2021);
+const javascript = new Language('Javascript', 2, 2021);
+const jQuery = new Language('jQuery', 2, 2021);
+const bash = new Language('Bash Scripting', 10, 2022);
+const powershell = new Language('PowerShell', 09, 2022);
 
 
 
@@ -85,10 +136,10 @@ const slideShow = () => {
     // actual slide - wtf i did it!?! only took 6 months to figure out lol
     const slideInterval = setInterval(() => {
 
-        if(count === false){
+        if (count === false) {
             createLangHeader()
             count = true;
-        } 
+        }
         // increase our index (much like increasing i in a for loop)
         ++languageArrayIndex;
         // this says once we get our index to be greater to or equal the length of the array, we'll start back from first number in index [0]

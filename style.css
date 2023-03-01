@@ -5,23 +5,38 @@
 
 /*------------------------------------------------------- body styling */
 body {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
     max-width: 1500px;
     background-color: black;
     margin: 10px 2em 0px 2em;
     padding: 2em;
     border: 1px solid rgba(0, 231, 158, 1);
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body.fade-in {
+    opacity: 1;
 }
 
 /* ----------------------------------------------------------Main Styling */
 
 /* Jeffery W. Patterson */
-#name {
+
+nav>h1:first-child {
     background-color: black;
     color: white;
     font-size: 5em;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(53, 220, 189, 0.638);
 }
+
+/* #name {
+    background-color: black;
+    color: white;
+    font-size: 5em;
+    text-align: center;
+} */
 
 /* Titles for each section */
 .section-title {
@@ -64,14 +79,36 @@ a:visited {
 }
 
 /*----------------------------------------------------------- languages formatting */
+
 #languages {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    width: fit-content;
+    margin: 0 auto;
     margin-top: 10px;
-    height: 137px;
+    height: 111px;
     text-align: center;
     font-size: 1.5em;
     color: white !important;
     background-color: black;
-    box-shadow: 0 0 0 1px black, 0 0 0 2px rgba(0, 231, 158, 1), 0 0 0 3px rgba(0, 231, 158, 1), 0 0 0 8px black;
+    /* box-shadow: 0 0 0 1px black, 0 0 0 2px rgba(0, 231, 158, 1), 0 0 0 3px rgba(0, 231, 158, 1), 0 0 0 8px black; */
+}
+
+#languages.fade-in {
+    opacity: 1;
+}
+
+#language-card-wrapper {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#language-card-wrapper.fade-in {
+    opacity: 1;
+}
+
+#language-card-wrapper.fade-out {
+    opacity: 0;
 }
 
 /* #language-card-wrapper > h1 {
@@ -127,25 +164,32 @@ a:visited {
 }
 
 /*--------------------------------------------------- skills style */
+
+
 .skills {
-    padding: 20px 0;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 3px;
+    width: fit-content;
     font-size: 18px;
-    grid-template-columns: repeat(2, 1fr);
     text-align: center;
-    background-color: var(--bg-color);
+    border-radius: 2%;
+    background-color: rgba(0, 231, 158, 1);
     list-style: none;
 }
 
 .skills>div {
-    border: 4px solid black;
     padding: 1em;
+    border: 4px solid black;
+    background-color: var(--bg-color);
 }
-
 
 .column-title {
     margin-bottom: 12px;
-    font-size: 2em;
+    font-size: 24px;
+    padding-top: 10px;
+    font-weight: bolder;
 }
 
 footer {
@@ -154,8 +198,8 @@ footer {
     text-align: center;
 }
 
-@media only screen and (max-width: 751px) {
-    #name {
+@media only screen and (max-width: 851px) {
+    nav>h1:first-child {
         font-size: 3em;
     }
 
@@ -199,31 +243,13 @@ footer {
     }
 
     #languages {
-        height: 167px;
+        height: 139px;
 
     }
 
-    .skills {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        padding: 3px;
-        width: fit-content;
-        font-size: 18px;
-        text-align: center;
-        border-radius: 2%;
-        background-color: rgba(0, 231, 158, 1);
-    }
 
-    .skills>div {
-        background-color: var(--bg-color);
-    }
 
-    .column-title {
-        padding-top: 10px;
-        font-size: 24px;
-        font-weight: bolder;
-    }
+
 
     footer>p {
         color: white;
