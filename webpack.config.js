@@ -4,32 +4,35 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './index.html',
+  entry: {
+    index: './src/js/index.js',
+    // repositories: './src/js/repoList.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js', // use [name] to generate a unique name for each asset 
     path: path.resolve(__dirname, 'dist'),
   },
-  devServer: {
-    // The `hot` option is to use the webpack-dev-server in combination with the hot module replacement API.
-    hot: 'only',
-  },
-
+  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
+      title: 'My Resume',
       template: './index.html',
-      title: 'Webpack Plugin',
+      showErrors: true,
+      xhtml: true,
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      linkType: 'text/css',
+
+    }),
   ],
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
       },
       {
         test: /\.m?js$/,
@@ -38,6 +41,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-syntax-import-assertions']
           },
         },
       },
