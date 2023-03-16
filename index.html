@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <!-- jquery link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Jeffery Patterson Resume 2022</title>
@@ -27,13 +27,17 @@
         </nav>
     </header>
     <!-- Holds everything in the education section-->
+    <section>
+        <h1>Education</h1>
+    </section>
     <section id="education-aside">
         <div id="education-details">
-            <div class="degree">
-                <div>Bachelors of Arts</div>
-                <div>UCLA</div>
-                <div>June 2016</div>
-            </div>
+            <div class="degree" role="listitem" aria-label="Bachelor of Arts from UCLA, received in June 2016">
+                <div role="heading" aria-level="3">Bachelor of Arts</div>
+                <div role="text" aria-label="University or College">UCLA</div>
+                <div role="text" aria-label="Graduation Date">June 2016</div>
+              </div>
+              
             <div class="certificate">
                 <div>Full Stack Web Developer</div>
                 <div>UCLA Extension</div>
@@ -81,8 +85,8 @@
         <p>Last Updated: February 2023</p>
     </footer>
     <!--my javascript script-->
-    <script src="animate.js"></script>
-    <script src="language.js"></script>
+    <script src="./src/js/index.js"></script>
+    <!-- <script src="test.js"></script> -->
     <script type="module" src="repoList.js"></script>
 </body>
 

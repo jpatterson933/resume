@@ -1,8 +1,22 @@
+const shimmer = () => {
+    // I want to switch classes on .contact-details>div
+    // this returns an array of the 2nd, and third div children
+    let contactDivs = document.querySelectorAll('.contact-details > div:nth-child(n+2):nth-child(-n+3)')
+    // console.log(contactDivs, "contactDivs")
+    contactDivs.forEach(div => {
+        // toggle switches back and forth between classes
+        div.classList.toggle('non-shimmer');
+        div.classList.toggle('shimmer');
+    });
+
+}
+
 // fade in resume page
 window.addEventListener("load", function () {
     document.body.classList.add("fade-in");
 });
 
+setInterval(shimmer, 2000); // Run the function every 2 seconds (2000 milliseconds)
 // get current date
 const date = new Date()
 const month = date.getMonth()
@@ -128,7 +142,7 @@ const slideShow = () => {
     let count = false;
     // empty array where we push our languages into
     const languageArray = [];
-    // we set our index to -1 so it starts at the first one which is 0
+    // we set our index to -1 so it s-tarts at the first one which is 0
     languageArrayIndex = -1;
     // push language classes into our array
     languageArray.push(html, css, javascript, jQuery, bash, powershell);
