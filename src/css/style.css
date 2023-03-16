@@ -1,0 +1,285 @@
+:root {
+    --bg-color: rgba(242, 255, 248, 1);
+}
+
+/*------------------------------------------------------- body styling */
+body {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    max-width: 1500px;
+    background-color: black;
+    margin: 10px 2em 0px 2em;
+    padding: 2em;
+    border: 1px solid rgba(0, 231, 158, 1);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+/* ----------------------------------------------------------Main Styling */
+
+/* Jeffery W. Patterson */
+
+nav>h1:first-child {
+    background-color: black;
+    color: white;
+    font-size: 5em;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(53, 220, 189, 0.638);
+}
+
+/* #name {
+    background-color: black;
+    color: white;
+    font-size: 5em;
+    text-align: center;
+} */
+
+/* Titles for each section */
+.section-title {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    box-shadow: 0 0 0 1px black, 0 0 0 2px rgba(0, 231, 158, 1), 0 0 0 3px rgba(0, 231, 158, 1), 0 0 0 8px black;
+
+}
+
+/*----------------------------------------------- link styling */
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+/*----------------------------------------- contact details box */
+.contact-details {
+    display: flex;
+    font-size: 1.5em;
+    background-color: black;
+}
+
+/*------------------------------------------ navigation bar  */
+.non-shimmer {
+    color: white;
+    border: 1px dashed rgb(0 231 158 / 41%);
+    margin: 0 auto 8px auto;
+    border-radius: 30px;
+    padding: 10px 12px;
+}
+
+.shimmer {
+    color: white;
+    background-color: #252525;
+    border: 1px solid rgb(53 220 189 / 64%);
+    margin: 0 auto 8px auto;
+    border-radius: 30px;
+    padding: 10px 12px;
+
+}
+
+/* This will be the css element that changes to the one above 
+as a sort of sparkle or shimmer to draw the users attention */
+/* .contact-details>div {
+    color: white;
+    border: 1px dashed rgb(0 231 158 / 41%);
+    margin: 0 auto 8px auto;
+    border-radius: 30px;
+    padding: 10px 12px;
+} */
+
+
+
+/*nav bar styling by html elements*/
+div>a,
+div>a:visited,
+a:link {
+    color: white;
+}
+
+/* .contact-details>div>a:hover {
+    padding: 3px 0;
+    border: solid black;
+    border-style: none dotted dotted none;
+    border-radius: 1px;
+} */
+
+/*----------------------------------------------------------- languages formatting */
+
+#languages {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 10px;
+    height: 111px;
+    text-align: center;
+    font-size: 1.5em;
+    color: white !important;
+    background-color: black;
+    /* box-shadow: 0 0 0 1px black, 0 0 0 2px rgba(0, 231, 158, 1), 0 0 0 3px rgba(0, 231, 158, 1), 0 0 0 8px black; */
+}
+
+#languages.fade-in {
+    opacity: 1;
+}
+
+#language-card-wrapper {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#language-card-wrapper.fade-in {
+    opacity: 1;
+}
+
+#language-card-wrapper.fade-out {
+    opacity: 0;
+}
+
+/* #language-card-wrapper > h1 {
+    transition-property: all;
+    transition: ease 1s;
+    transition-duration: 1s;
+} */
+
+.github-language-stats,
+.initial-github-stats {
+    text-align: center;
+    padding: 1em 0;
+    color: white !important;
+}
+
+
+/*----------------------------------------------------------- education section */
+#education-aside {
+    display: flex;
+    padding: 10px 0;
+}
+
+#education-details,
+#education-details-right {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 auto;
+    padding: 1px 0;
+    justify-content: space-evenly;
+}
+
+#education-details {
+    margin-right: 1px;
+}
+
+.degree,
+.certificate {
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+.degree>div,
+.certificate>div {
+    font-size: 18px;
+}
+
+.degree {
+    text-align: right;
+}
+
+.certificate {
+    padding: 0.5em 0 0.5em 1em;
+}
+
+/*--------------------------------------------------- skills style */
+
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 3px;
+    width: fit-content;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 2%;
+    background-color: rgba(0, 231, 158, 1);
+    list-style: none;
+}
+
+.skills>ul {
+    padding: 1em;
+    border: 4px solid black;
+    background-color: var(--bg-color);
+    list-style: none;
+}
+
+.column-title {
+    margin-bottom: 12px;
+    font-size: 24px;
+    padding-top: 10px;
+    font-weight: bolder;
+}
+
+footer {
+    color: white;
+    margin-top: 24px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 851px) {
+    nav>h1:first-child {
+        font-size: 3em;
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+    }
+
+    #education-aside {
+        padding: 10px 0;
+        display: flex;
+    }
+
+    #education-details,
+    #education-details-right {
+        display: flex;
+        padding: 1px 0;
+        flex-direction: column;
+    }
+
+    .degree,
+    .certificate {
+        font-size: 20px;
+        height: 80%;
+        padding: 0;
+        margin-top: 1px;
+    }
+
+    .degree {
+        text-align: right;
+        width: 100%;
+    }
+
+    .degree>div {
+        padding-right: 10px;
+    }
+
+    .certificate>div {
+        padding-left: 10px;
+    }
+
+    #languages {
+        height: 139px;
+
+    }
+
+
+    footer>p {
+        color: white;
+        margin-top: 24px;
+        text-align: center;
+    }
+}
