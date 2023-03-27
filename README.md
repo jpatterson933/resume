@@ -3,6 +3,7 @@
 ## [Live Resume Link](https://jpatterson933.github.io/resume/)
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dae2f93f-1d84-47d6-8f55-b061d832f628/deploy-status)](https://app.netlify.com/sites/cool-rugelach-51515d/deploys)
 
 # Table of Contents
 1. [Description](#application-description)
